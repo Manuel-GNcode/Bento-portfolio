@@ -1,8 +1,21 @@
-# React + Vite
+# Portafolio de < GNcode />
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Descripción
+Este es mi portafolio personal, diseñado para mostrar mis habilidades y proyectos de desarrollo frontend. El proyecto está construido en ReactJS, utilizando CSS para la estilización y Vite como bundler. Todo el código está escrito en JavaScript.
 
-Currently, two official plugins are available:
+## Características
+- Utiliza el Bento Grid para crear una estructura flexible y poderosa.
+- Destaca mis habilidades y proyectos de desarrollo web.
+- Proporciona una experiencia de usuario excepcional.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Personalización
+Este proyecto es altamente personalizable:
+- Reemplaza los proyectos y la información predeterminada con tu propio contenido.
+- Modifica colores, fuentes y estilos CSS para reflejar tu identidad visual.
+- Agrega nuevos componentes o secciones según tus necesidades.
+- Integra otras bibliotecas o APIs para ampliar las funcionalidades de tu portafolio.
+
+## Demo
+Puedes ver mi portafolio en acción aquí.
+
+¡Espero que te sirva como punto de partida para tu propio portafolio! 😊
