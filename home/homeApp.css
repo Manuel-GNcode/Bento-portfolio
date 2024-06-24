@@ -1,0 +1,633 @@
+:root {
+    --bg-color: #000;
+    --bg-second: #ffffff07;
+    --text-color: #ddd;
+    --second-text: #9d9d9d;
+    --details: #ba181b;
+    --border: #ffffff13;
+    --width-icons: 20px;
+    --width-stack: 70px;
+}
+body {
+    background-color: var(--bg-color);
+    transition: background-color 0.3s ease-in;
+    overflow-x: hidden;
+}
+h1 {
+    font-size: 1.3rem;
+    color: var(--text-color);
+    position: relative;
+}
+h2 {
+    font-size: 1rem;
+    color: var(--text-color);
+    position: relative;
+}
+h1::before, h2::before {
+    content: '';
+    width: 100%;
+    height: 30%;
+    position: absolute;
+    bottom: 0;
+    background-color: var(--bg-color);
+    filter: blur(10px);
+}
+p, input, #clientMessage, a {
+    font-size: .8rem;
+    color: var(--second-text);
+}
+a {
+    text-decoration: none;
+    font-weight: bold;
+    transition: color .3s ease-in;
+}
+a:hover {
+    color: var(--details);
+}
+
+.particles {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -10;
+}
+
+/*Container style*/
+.bentoCtr {
+    max-width: 900px;
+    background-color: var(--bg-color);
+    transition: background-color 0.3s ease-in;
+    margin: 32px auto 0;
+    display: grid;
+    grid-gap: 12px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: 
+        "tags tags"
+        "pers pers"
+        "proj proj"
+        "deck deck"
+        "cert cloc"
+        "abou abou"
+        "cont cont";
+}
+
+/*Cells style*/
+.bentoSection {
+    border: 1px solid var(--border);
+    background-color: var(--bg-second);
+    border-radius: 20px;
+    padding: 16px;
+    position: relative;
+    z-index:20;
+    box-shadow: 2px 2px 5px #00000018;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    overflow: hidden;
+    transition: background-color 0.3s ease-in;
+}
+.bentoSection:hover {
+    background-color: var(--bg-color);
+}
+.bentoSection::before {
+    content: "";
+    position: absolute;
+    top: -30%;
+    filter: blur(50px) opacity(0.7);
+    width: 100%;
+    height: 30%;
+    background-color: var(--border);
+    z-index: 50;
+}
+
+/* Button Effects */
+.btn-a {
+    border: 1px solid var(--border);
+    padding: 8px 0;
+    margin: 0 auto;
+    border-radius: 10px;
+    text-decoration: none;
+    color: var(--second-text);
+    background-color: transparent;
+    cursor: pointer;
+	position: relative;
+	font-weight: bold;
+    font-size: .7rem;
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: none;
+    transition: color .3s ease-in, border .3s ease-in;
+}
+.btn-a:hover {
+    color: var(--text-color);
+    border: 1px solid transparent;
+}
+.btn-a::before {
+    content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: var(--bg-second);
+    border-radius: 10px;
+    transition: all 0.3s ease-in;
+}
+.btn-a:hover::before {
+	opacity: 0 ;
+	transform: scale(0.5,0.5);
+}
+.btn-a::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	border: 1px solid var(--details);
+	transform: scale(1.2,1.2);
+    border-radius: 10px;
+    transition: all 0.3s ease-in;
+}
+.btn-a:hover::after {
+	opacity: 1;
+	transform: scale(1,1);
+}
+
+/* tags style */
+.bentoTags {
+    grid-area: tags;
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+}
+.bentoTags-btn {
+    flex: 1;
+    height: 100%;
+}
+.bentoTags-btn:first-child {
+    flex: 2;
+}
+.bentoTags-btn:first-child b {
+    color: var(--details);
+    transition: color 0.3s ease-in;
+}
+.bentoTags-btn:last-child {
+    padding: 2px 0;
+}
+.bentoTags-btn:last-child i svg {
+    width: var(--width-icons);
+    height: var(--width-icons);
+}
+.bentoTags-btn:last-child i svg path {
+    fill: var(--details);
+    transition: fill 0.3s ease-in;
+}
+
+/* Personal information style */
+.bentoPersonal {
+    grid-area: pers;
+    align-items: normal;
+}
+.bentoPersonal header {
+    display: flex;
+    gap: 12px;
+    position: relative;
+}
+.bentoPersonal-photo {
+    width: 100px;
+    height: 110px;
+    background-color: var(--details);
+    border-radius: 10px;
+    transition: background-color 0.3s ease-in;
+    overflow: hidden;
+    outline: 2px solid var(--border);
+}
+.bentoPersonal-photo img {
+    filter:grayscale(0.3) brightness(.9);
+}
+.bentoPersonal header>div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.bentoPersonal-available {
+    font-size: .7rem;
+    border: 1px solid var(--border);
+    padding: 8px 10px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+    color: var(--second-text);
+}
+.bentoPersonal-available span {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background-color: #06D001;
+    box-shadow: 0 0 0px 0px #9BEC00;
+    animation: pulse .7s ease-in-out infinite alternate;
+}
+@keyframes pulse {
+    to {
+        box-shadow: 0 0 10px 1px #99ec00a9;
+    }
+}
+.bentoPersonal-profesion span {
+    color: var(--details);
+    font-weight: bold;
+    transition: color 0.3s ease-in;
+}
+.bentoPersonal-resume {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    color: var(--second-text);
+    font-weight: bold;
+    font-size: .7rem;
+    padding: 8px;
+    border-radius: 10px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease-in, color 0.3s ease-in;;
+}
+.bentoPersonal-resume:hover {
+    color: var(--text-color);
+    background-color: var(--bg-second);
+}
+/* Resumen icon style */
+.bentoPersonal-resume .svg-resume svg {
+    width: var(--width-icons);
+    height: var(--width-icons);
+}
+.bentoPersonal-resume .svg-resume svg path {
+    fill: var(--details);
+    transition: fill 0.3s ease-in;
+}
+.bentoPersonal main {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    background-color: var(--bg-second);
+    border-radius: 10px;
+    padding: 8px;
+}
+.bentoPersonal main span {
+    border: 1px solid var(--border);
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-size: .65rem;
+    color: var(--second-text);
+}
+.bentoPersonal footer {
+    display: flex;
+    justify-content: space-evenly;
+    border-radius: 10px;
+    gap: 12px;
+    font-weight: bold;
+}
+.bentoPersonal footer a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
+/* Email & Whatsapp icon style */
+.bentoPersonal footer a span svg {
+    width: var(--width-icons);
+    height: var(--width-icons);
+    fill: var(--details);
+    transition: fill 0.3s ease-in;
+}
+.bentoPersonal footer a #Dribbble-Light-Preview {
+    fill: var(--details);
+    transition: fill 0.3s ease-in;
+}
+
+/* Projects gallery style */
+.bentoProjects {
+    grid-area: proj;
+    gap: 16px;
+}
+.bentoProjects-subtitle, .bentoDeck-subtitle, .bentoContact-subtitle, .bentoAbout-subtitle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+/* Briefcase icon style */
+.bentoProjects-subtitle .svg-briefcase svg {
+    width: var(--width-icons);
+    height: var(--width-icons);
+}
+.bentoProjects-subtitle .svg-briefcase svg path {
+    stroke: var(--details);
+    transition: stroke 0.3s ease-in;
+}
+/* Autoslider */
+.wrapper {
+    width: 100%;
+    height: 130px;
+    position: relative;
+    overflow: hidden;
+    mask-image: linear-gradient(to right,
+            rgba(0, 0, 0, 0),
+            rgba(255, 255, 255, 1) 20%,
+            rgba(255, 255, 255, 1) 80%,
+            rgba(0, 0, 0, 0)
+            );
+}
+.wrapper span {
+    position: absolute;
+    top: 0;
+    left: max(calc(100px * 12), 100%);
+    width: 210px;
+    height: 100%;
+    animation: autoSlide 30s linear infinite;
+    animation-delay: calc((30s / 6) * (6 - var(--i)) * -1);
+    border-radius: 20px;
+    border: 2px solid var(--border);
+    overflow: hidden;
+}
+@keyframes autoSlide {
+    to {
+        left: -210px;
+    }
+}
+.wrapper:hover span {
+    animation-play-state: paused;
+}
+.wrapper span img {
+    width: 105%;
+    height: 105%;
+    object-fit: cover;
+    transition: width 0.2s ease-in, height 0.2s ease-in;
+}
+.wrapper span:hover img {
+    width: 115%;
+    height: 115%;
+}
+
+/*certifications' section style*/
+.bentoCertifications {
+    grid-area: cert;
+}
+.bentoCertifications-number {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 4rem;
+}
+.bentoCertifications-number b {
+    color: var(--details);
+    transition: color .3s ease-in;
+}
+
+/* Quote's style */
+.bentoPhrase {
+    grid-area: cloc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.bentoPhrase p {
+    text-align: center;
+}
+
+/*deck style*/
+.bentoDeck {
+    grid-area: deck;
+    gap: 16px;
+}
+/* Stack icon style */
+.bentoDeck-svgStack svg {
+    width: var(--width-icons);
+    height: var(--width-icons);
+    fill: var(--details);
+    stroke: var(--details);
+    transition: fill 0.3s ease-in, stroke 0.3s ease-in;
+}
+.bentoDeck-stacks {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 100%;
+}
+/* Technologies icons style */
+.bentoDeck-stacks span svg {
+    width: var(--width-stack);
+    height: var(--width-stack);
+    fill: var(--second-text);
+    border-radius: 5px;
+}
+.bentoDeck-stacks span svg #Dribbble-Light-Preview {
+    fill: var(--second-text);
+}
+
+/* Bento Services Style */
+.bentoAbout {
+    grid-area: abou;
+    gap: 16px;
+    justify-content: start;
+}
+.bentoAbout-subtitle svg {
+    width: var(--width-icons);
+    height: var(--width-icons);
+}
+.bentoAbout-subtitle svg path {
+    fill: var(--details);
+    transition: fill 0.3s ease-in,
+}
+.bentoAbout-text {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    text-align: left;
+}
+
+/* Bento contact style */
+.bentoContact {
+    grid-area: cont;
+    gap: 16px;
+}
+.bentoContact-svgContact svg {
+    width: var(--width-icons);
+    height: var(--width-icons);
+    fill: var(--details);
+    transition: fill 0.3s ease-in,;
+}
+.bentoContact-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.bentoContact-form input, #clientMessage {
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid var(--second-text);
+    color: var(--text-color);
+    padding: 10px;
+    outline: none;
+    font-family: inherit;
+    transition: border-bottom 0.3s ease-in, background-color .3s ease-in;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+.bentoContact-form input:hover, #clientMessage:hover {
+    border-bottom: 2px solid var(--text-color);
+}
+.bentoContact-form input:focus, #clientMessage:focus {
+    border-bottom: 2px solid var(--details);
+    background-color: var(--bg-second);
+}
+.bentoContact-form input::placeholder {
+    color: var(--second-text);
+    transition: color .3s ease-in;
+}
+.bentoContact-form input:hover::placeholder {
+    color: var(--text-color);
+}
+.bentoContact-form label p {
+    padding: 10px;
+}
+.bentoContact label:hover p {
+    color: var(--text-color);
+}
+.bentoContact-form #clientMessage {
+    resize: none;
+    width: 100%;
+}
+.formModal {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--bg-color);
+    transition: all .3s ease-in;
+    z-index: 30;
+    opacity: .8;
+    text-align: center;
+}
+.formModal p {
+    color: var(--text-color);
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Footer */
+.bentoFooter {
+    text-align: center;
+    max-width: 900px;
+    margin: 32px auto 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    position: relative;
+    z-index: 20;
+}
+.bentoFooter-nav {
+    display: flex;
+    justify-content: space-evenly;
+}
+.bentoFooter-nav a {
+    color: var(--second-text);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: .8rem;
+    transition: color 0.3s ease-in;
+}
+.bentoFooter-nav a:hover {
+    color: var(--details);
+}
+.bentoFooter-author p b {
+    color: var(--details);
+}
+
+/* Mediaqueries */
+@media screen and (width < 450px) {
+    .bentoPersonal-resume {
+        display: none;
+    }
+}
+
+/* 450px es la conf por defecto */
+
+@media screen and (width >= 700px) {
+    :root {
+        --width-stack: 45px;
+        --width-icons: 25px;
+    }
+    .bentoCtr {
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-areas: 
+            "tags tags tags deck deck"
+            "pers pers pers deck deck"
+            "pers pers pers cert cloc"
+            "proj proj proj proj proj"
+            "abou abou cont cont cont";
+    }
+    .bentoFooter {
+        flex-direction: row;
+    }
+    .bentoFooter-author {
+        order: -1;
+    }
+    .bentoFooter-nav {
+        flex: 2;
+        justify-content: end;
+        gap: 16px;
+    }
+    .bentoPhrase p {
+        font-size: .6rem;
+    }
+}
+@media screen and (width >= 900px) {
+    :root {
+        --width-stack: 60px;
+    }
+    h1 {
+        font-size: 1.4rem;
+    }
+    h2 {
+        font-size: 1.2rem;
+    }
+    p, .btn-a, input, #clientMessage {
+        font-size: .9rem;
+    }
+    .bentoPersonal-photo {
+        width: 130px;
+    }
+    .wrapper {
+        height: 160px;
+    }
+    .wrapper span {
+        width: 280px;
+        left: max(calc(100px * 18), 100%);
+    }
+    @keyframes autoSlide {
+        to {
+            left: -280px;
+        }
+    }
+    .bentoFooter-nav a {
+        font-size: .9rem;
+    }
+    .bentoPhrase p {
+        font-size: .8rem;
+    }
+}

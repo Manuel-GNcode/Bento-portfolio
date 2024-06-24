@@ -1,0 +1,212 @@
+.projectsCtr-section-lan, .projectsCtr-section-github {
+    position: absolute;
+    z-index: 50;
+    right: 32px;
+    top: 32px;
+    border-radius: 5px;
+}
+.projectsCtr-section-lan svg, .projectsCtr-section-github i svg {
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+}
+.projectsCtr-section-lan svg g, .projectsCtr-section-github i svg g {
+    fill: var(--text-color);
+    transition: fill .3s ease-out;
+}
+.projectsCtr-section-github {
+    top: 72px;
+}
+.projectsCtr-section-github:hover i svg g {
+    fill: var(--second-text);
+}
+.projectsCtr-section-github::before {
+    content: 'Visit repository';
+    position: absolute;
+    opacity: 0;
+    font-size: .5rem;
+    bottom: -24px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    border: 1px solid var(--text-color);
+    padding: 4px;
+    white-space: nowrap;
+    transition: opacity .3s ease-out;
+    pointer-events: none;
+}
+.projectsCtr-section-github:hover::before, .projectsCtr-section-lan:hover::before {
+    opacity: 1;
+}
+
+.pro2Denviroment {
+    background-image: url(/public/2DPortfolio-one.jpg);
+}
+.pro2Denviroment2 {
+    background-image: url(/public/2Dportfolio-second.jpg);
+}
+.pro2Denviroment3 {
+    background-image: url(/public/2DPortfolio-third.jpg);
+}
+
+.proPokeDex {
+    background-image: url(/public/pokeDex-one.jpg);
+}
+.proPokeDex2 {
+    background-image: url(/public/pokeDex-second.jpg);
+}
+.proPokeDex3 {
+    background-image: url(/public/pokeDex-third.jpg);
+}
+
+
+.proTicTacToe {
+    background-image: url(/public/ticTacToe-one.jpg);
+}
+.proTicTacToe2 {
+    background-image: url(/public/ticTacToe-second.jpg);
+}
+.proTicTacToe3 {
+    background-image: url(/public/ticTacToe-third.jpg);
+}
+
+.proPomodoro {
+    background-image: url(/public/pomodoro-one.jpg);
+}
+.proPomodoro2 {
+    background-image: url(/public/pomodoro-second.jpg);
+}
+.proPomodoro3 {
+    background-image: url(/public/pomodoro-third.jpg);
+}
+
+.proCashRegister {
+    background-image: url(/public/cashRegister-one.jpg);
+}
+.proCashRegister2 {
+    background-image: url(/public/cashRegister-second.jpg);
+}
+.proCashRegister3 {
+    background-image: url(/public/cashRegister-third.jpg);
+}
+
+
+.proIsPalindrome {
+    background-image: url(/public/isPalindrome-one.jpg);
+}
+.proIsPalindrome2 {
+    background-image: url(/public/isPalindrome-second.jpg);
+}
+.proIsPalindrome3 {
+    background-image: url(/public/isPalindrome-third.jpg);
+}
+
+.proMissingDays {
+    background-image: url(/public/missingDays-one.jpg);
+}
+.proMissingDays2 {
+    background-image: url(/public/missingDays-second.jpg);
+}
+.proMissingDays3 {
+    background-image: url(/public/missingDays-third.jpg);
+}
+
+.proPhoneValidator {
+    background-image: url(/public/phoneValidator-one.jpg);
+}
+.proPhoneValidator2 {
+    background-image: url(/public/phoneValidator-second.jpg);
+}
+.proPhoneValidator3 {
+    background-image: url(/public/phoneValidator-third.jpg);
+}
+
+.proToRomanNumber {
+    background-image: url(/public/toRomanNumber-one.jpg);
+}
+.proToRomanNumber2 {
+    background-image: url(/public/toRomanNumber-second.jpg);
+}
+.proToRomanNumber3 {
+    background-image: url(/public/toRomanNumber-third.jpg);
+}
+
+.sections-modal .esc-btn {
+    position: absolute;
+    top: 32px;
+    right: 50px;
+    padding: 16px 32px;
+    font-size: 2rem;
+    font-weight: bold;
+    background-color: var(--bg-second);
+    border-radius: 10px;
+    cursor: pointer;
+    color: #ddd;
+}
+.sections-modal .esc-btn:hover {
+    color: #fff;
+    background-color: var(--border);
+}
+
+.sections-modal>div .modal-slide {
+    display: flex;
+    width: 632px;
+    height: 400px;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+.sections-modal .img-modal {
+    min-width: 100%;
+    height: 100%;
+    position: relative;
+    background-color: #bbb;
+    border-radius: 15px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    overflow: hidden;
+}
+.sections-modal .img-modal a {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 100%;
+    display: flex;
+    padding: 0 8px;
+    align-items: center;
+    background-color: #00000046;
+    transition: background-color .3s ease-out, backdrop-filter .3s ease-out;
+}
+.sections-modal .img-modal a:hover {
+    background-color: var(--border);
+    backdrop-filter: blur(2px);
+}
+.sections-modal .img-modal a svg {
+    width: 50px;
+    height: 50px;
+}
+.sections-modal .img-modal a svg path {
+    fill: #ddd;
+    transition: fill .3s ease-out;
+}
+.sections-modal .img-modal a:hover svg path {
+    fill: #fff;
+}
+.sections-modal .img-modal .btn-left {
+    left: 0;
+}
+.sections-modal .img-modal .btn-right {
+    right: 0;
+}
+
+@media screen and (max-width: 450px) {
+    .projectsCtr-section-lan svg, .projectsCtr-section-github i svg {
+        width: 20px;
+        height: 20px;
+        border-radius: 5px;
+    }
+    .projectsCtr-section-github {
+        top: 64px;
+    }
+}
