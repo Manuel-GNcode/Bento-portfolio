@@ -38,7 +38,7 @@ function HomeApp() {
 
     return (
         <>
-            <Particles className='particles' staticity={150} quantity={100} color={darkTheme ? '#dddddd' : '#212529'} />
+            <Particles className='particles' size={.6} staticity={150} quantity={150} color={darkTheme ? '#dddddd' : '#212529'} />
 
             <article id='bento-portfolio' className="bentoCtr">
                 <section className="bentoSection bentoTags">
@@ -50,7 +50,7 @@ function HomeApp() {
                 <section className="bentoSection bentoPersonal">
                     <header>
                         <span className='bentoPersonal-photo'>
-                            <img src="#" alt="Perfil photo" />
+                            <img src="perfil-photo.png" alt="Perfil photo" />
                         </span>
                         <div>
                             <div className='bentoPersonal-available'><span></span>{lanEn ? "Available to work" : "Disponible"}</div>
