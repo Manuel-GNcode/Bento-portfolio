@@ -8,7 +8,7 @@ const lanState = JSON.parse(localStorage.getItem('english'));
 const isEn = lanState == null ? true : lanState.english;
 
 const themeState = JSON.parse(localStorage.getItem('isDark'));
-const isDark = themeState == null ? true : lanState.isDark;
+const isDark = themeState == null ? true : themeState.isDark;
 
 changeTheme(isDark);
 
