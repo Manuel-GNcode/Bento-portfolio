@@ -11,14 +11,14 @@
     border-radius: 5px;
 }
 .projectsCtr-section-lan svg g, .projectsCtr-section-github i svg g {
-    fill: var(--text-color);
+    fill: #ccc;
     transition: fill .3s ease-out;
 }
 .projectsCtr-section-github {
     top: 72px;
 }
 .projectsCtr-section-github:hover i svg g {
-    fill: var(--second-text);
+    fill: #aaa;
 }
 .projectsCtr-section-github::before {
     content: 'Visit repository';

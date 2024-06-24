@@ -15,7 +15,7 @@ function CertificationtsApp() {
 
     return (
         <>
-        <Particles className='particles' staticity={150} color='#df70e7' />
+        <Particles className='particles' size={.6} staticity={150} quantity={150} color={isDark ? '#dddddd' : '#212529'} />
 
         <header className='sectionsHeader'>
             <p>&lt; <b>GN</b>code /&gt;</p>

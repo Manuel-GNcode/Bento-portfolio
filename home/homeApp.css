@@ -209,10 +209,12 @@ a:hover {
     border-radius: 10px;
     transition: background-color 0.3s ease-in;
     overflow: hidden;
-    outline: 2px solid var(--border);
 }
 .bentoPersonal-photo img {
-    filter:grayscale(0.3) brightness(.9);
+    width: 100%;
+    height: 100%;
+    filter:brightness(.8);
+    object-fit: cover;
 }
 .bentoPersonal header>div {
     display: flex;

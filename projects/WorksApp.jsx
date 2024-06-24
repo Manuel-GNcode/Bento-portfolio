@@ -15,7 +15,7 @@ changeTheme(isDark);
 function WorkApp() {
     return (
         <>
-        <Particles className='particles' quantity={200} staticity={100} color='#17b525'/>
+        <Particles className='particles' size={.6} staticity={150} quantity={150} color={isDark ? '#dddddd' : '#212529'} />
 
         <header className='sectionsHeader'>
             <p className='sectionsHeader-logo'>&lt; <b>GN</b>code /&gt;</p>
