@@ -57,8 +57,6 @@ a:hover {
 /*Container style*/
 .bentoCtr {
     max-width: 900px;
-    background-color: var(--bg-color);
-    transition: background-color 0.3s ease-in;
     margin: 32px auto 0;
     display: grid;
     grid-gap: 12px;

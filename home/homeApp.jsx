@@ -65,7 +65,7 @@ function HomeApp() {
                     </main>
 
                     <footer>
-                        <ButtonEffect link="#clientName" ariaLabel="Email me">
+                        <ButtonEffect link="mailto:gngalarga027@gmail.com?" ariaLabel="Email me">
                             <span className='svg-email'>{svgEmail}</span>
                         </ButtonEffect>
                         <ButtonEffect link="https://www.linkedin.com/in/manuel-hoyos-mesa/" target={true} ariaLabel="Visit my Linkedin">
