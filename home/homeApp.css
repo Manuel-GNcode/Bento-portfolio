@@ -48,7 +48,7 @@ h1::before, h2::before {
     background-color: var(--bg-color);
     filter: blur(10px);
 }
-p, input, #clientMessage, a {
+p, input, #clientMessage, a, figcaption {
     font-size: .8rem;
     color: var(--second-text);
 }
@@ -80,6 +80,7 @@ a:hover {
     grid-template-areas: 
         "tags tags"
         "pers pers"
+        "last last"
         "proj proj"
         "deck deck"
         "cert cloc"
@@ -279,7 +280,7 @@ a:hover {
     border-radius: 10px;
     cursor: pointer;
     text-decoration: none;
-    transition: background-color 0.3s ease-in, color 0.3s ease-in;;
+    transition: background-color 0.3s ease-in, color 0.3s ease-in;
 }
 .bentoPersonal-resume:hover {
     color: var(--text-color);
@@ -334,12 +335,32 @@ a:hover {
     transition: fill 0.3s ease-in;
 }
 
+.bentoLastProject {
+    grid-area: last;
+}
+.bentoLastProject .svg-gameIcon svg {
+    width: var(--width-icons);
+    height: var(--width-icons);
+    fill: var(--details);
+}
+.bentoLastProject-video {
+    width: 100%;
+    height: fit-content;
+    cursor: pointer;
+}
+.bentoLastProject-video video {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    margin-bottom: 8px;
+}
+
 /* Projects gallery style */
 .bentoProjects {
     grid-area: proj;
     gap: 16px;
 }
-.bentoProjects-subtitle, .bentoDeck-subtitle, .bentoContact-subtitle, .bentoAbout-subtitle {
+.bentoProjects-subtitle, .bentoDeck-subtitle, .bentoContact-subtitle, .bentoAbout-subtitle, .bentoLastProject-subtitle {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -594,6 +615,7 @@ a:hover {
             "tags tags tags deck deck"
             "pers pers pers deck deck"
             "pers pers pers cert cloc"
+            "last last last last last"
             "proj proj proj proj proj"
             "abou abou cont cont cont";
     }
