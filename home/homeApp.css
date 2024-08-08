@@ -391,11 +391,11 @@ a:hover {
 .wrapper span {
     position: absolute;
     top: 0;
-    left: max(calc(100px * 12), 100%);
+    left: max(calc(100px * 8), 100%);
     width: 210px;
     height: 100%;
     animation: autoSlide 30s linear infinite;
-    animation-delay: calc((30s / 6) * (6 - var(--i)) * -1);
+    animation-delay: calc((30s / 4) * (4 - var(--i)) * -1);
     border-radius: 20px;
     border: 2px solid var(--border);
     overflow: hidden;
@@ -655,7 +655,7 @@ a:hover {
     }
     .wrapper span {
         width: 280px;
-        left: max(calc(100px * 18), 100%);
+        left: max(calc(100px * 12), 100%);
     }
     @keyframes autoSlide {
         to {

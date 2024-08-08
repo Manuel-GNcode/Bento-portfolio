@@ -1,4 +1,6 @@
 const descriptions = {
+    reactEn: 'Certified in front end development libraries, with over 300 hours of practical training.',
+    reactEs: 'Certificado en librerías de desarrollo front end, con más de 300 horas de formación práctica.',
     cssEn: 'Certified in responsive web design, with over 300 hours of practical training.',
     cssEs: 'Certificado en diseño web responsivo, con más de 300 horas de formación práctica.',
     jsEn: 'Certified in JavaScript algorithms and data structures, demonstrating proficiency in programming logic and problem-solving.',
@@ -10,6 +12,18 @@ const descriptions = {
 }
 
 export const certificatesInformation = {
+    react: {
+        name: {
+            en: 'Libraries Degree',
+            es: 'Certificado de Librerías'
+        },
+        class: 'certLibraries',
+        description: {
+            en: descriptions.reactEn,
+            es: descriptions.reactEs
+        },
+        key: 'libraries-degree'
+    },
     css: {
         name: {
             en: 'CSS Degree',

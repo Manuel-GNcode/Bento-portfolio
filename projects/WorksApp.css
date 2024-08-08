@@ -40,6 +40,16 @@
     opacity: 1;
 }
 
+.proCutePortfolio {
+    background-image: url(/cute-portfolio-1.webp);
+}
+.proCutePortfolio2 {
+    background-image: url(/cute-portfolio-2.webp);
+}
+.proCutePortfolio3 {
+    background-image: url(/cute-portfolio-3.webp);
+}
+
 .pro2Denviroment {
     background-image: url(/2DPortfolio-one.jpg);
 }
@@ -50,16 +60,15 @@
     background-image: url(/2Dportfolio-third.jpg);
 }
 
-.proPokeDex {
-    background-image: url(/pokeDex-one.jpg);
+.proArkanoid {
+    background-image: url(/arkanoid-1.webp);
 }
-.proPokeDex2 {
-    background-image: url(/pokeDex-second.jpg);
+.proArkanoid2 {
+    background-image: url(/arkanoid-2.webp);
 }
-.proPokeDex3 {
-    background-image: url(/pokeDex-third.jpg);
+.proArkanoid3 {
+    background-image: url(/arkanoid-3.webp);
 }
-
 
 .proTicTacToe {
     background-image: url(/ticTacToe-one.jpg);
@@ -69,67 +78,6 @@
 }
 .proTicTacToe3 {
     background-image: url(/ticTacToe-third.jpg);
-}
-
-.proPomodoro {
-    background-image: url(/pomodoro-one.jpg);
-}
-.proPomodoro2 {
-    background-image: url(/pomodoro-second.jpg);
-}
-.proPomodoro3 {
-    background-image: url(/pomodoro-third.jpg);
-}
-
-.proCashRegister {
-    background-image: url(/cashRegister-one.jpg);
-}
-.proCashRegister2 {
-    background-image: url(/cashRegister-second.jpg);
-}
-.proCashRegister3 {
-    background-image: url(/cashRegister-third.jpg);
-}
-
-
-.proIsPalindrome {
-    background-image: url(/isPalindrome-one.jpg);
-}
-.proIsPalindrome2 {
-    background-image: url(/isPalindrome-second.jpg);
-}
-.proIsPalindrome3 {
-    background-image: url(/isPalindrome-third.jpg);
-}
-
-.proMissingDays {
-    background-image: url(/missingDays-one.jpg);
-}
-.proMissingDays2 {
-    background-image: url(/missingDays-second.jpg);
-}
-.proMissingDays3 {
-    background-image: url(/missingDays-third.jpg);
-}
-
-.proPhoneValidator {
-    background-image: url(/phoneValidator-one.jpg);
-}
-.proPhoneValidator2 {
-    background-image: url(/phoneValidator-second.jpg);
-}
-.proPhoneValidator3 {
-    background-image: url(/phoneValidator-third.jpg);
-}
-
-.proToRomanNumber {
-    background-image: url(/toRomanNumber-one.jpg);
-}
-.proToRomanNumber2 {
-    background-image: url(/toRomanNumber-second.jpg);
-}
-.proToRomanNumber3 {
-    background-image: url(/toRomanNumber-third.jpg);
 }
 
 .sections-modal .esc-btn {

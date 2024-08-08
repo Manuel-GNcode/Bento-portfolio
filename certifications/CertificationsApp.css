@@ -74,6 +74,9 @@
     z-index: 50;
 }
 
+.certLibraries {
+    background-image: url(/certifications/public/libraries-degree.webp);
+}
 .certResponsive {
     background-image: url(/certifications/public/css-degree.jpg);
 }
