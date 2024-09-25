@@ -4,15 +4,15 @@ import { Particles } from '../home/components/particles';
 import { Link } from 'react-router-dom';
 import { changeTheme } from '../home/functions/functions';
 
-const lanState = JSON.parse(localStorage.getItem('english'));
-const isEn = lanState == null ? true : lanState.english;
-
-const themeState = JSON.parse(localStorage.getItem('isDark'));
-const isDark = themeState == null ? true : themeState.isDark;
-
-changeTheme(isDark);
-
 function WorkApp() {
+    const lanState = JSON.parse(localStorage.getItem('english'));
+    const isEn = lanState == null ? true : lanState.english;
+
+    const themeState = JSON.parse(localStorage.getItem('isDark'));
+    const isDark = themeState == null ? true : themeState.isDark;
+
+    changeTheme(isDark);
+
     return (
         <>
         <Particles className='particles' size={.6} staticity={150} quantity={150} color={isDark ? '#dddddd' : '#212529'} />

@@ -1,4 +1,6 @@
 const proDescriptions = {
+    cBalEn: 'Ensure your color combinations are accessible and easy to read. My tool evaluates the contrast between two colors and indicates whether they meet accessibility standards. Ideal for designers and web developers looking to improve readability and user experience.',
+    cBalEs: 'Asegúrate de que tus combinaciones de colores sean accesibles y fáciles de leer. Mi herramienta evalúa el contraste entre dos colores e indica si cumplen con los estándares de accesibilidad. Ideal para diseñadores y desarrolladores web que buscan mejorar la legibilidad y la experiencia del usuario.',
     cuteEn: 'I am collaborating with graphic designer Sirius Chan on a custom illustration gallery project. In this project, I have developed various features including an infinite slider, zoom functionality within images, and a claw machine game. Additionally, I have implemented several animations that enhance the experience. I invite you to explore the gallery and see what it has to offer.',
     cuteEs: 'Trabajo en colaboración con la diseñadora gráfica Sirius Chan en un proyecto de una galería de ilustraciones personalizadas. En este proyecto, he desarrollado diversas funcionalidades como un slider infinito, la capacidad de hacer zoom en las imágenes, y un juego de garra mecánica. Además, he implementado varias animaciones que enriquecen la experiencia. Te invito a explorar la galería y descubrir todo lo que ofrece.',
     '2DEn': 'A JavaScript project where I worked with the Kaboom.js library, which is designed for game development. In my case, I created an imitation of my room and workspace. It was an interesting experience and quite different from what I was used to.',
@@ -10,6 +12,20 @@ const proDescriptions = {
 }
 
 export const projectsInformation = {
+    colorBalance: {
+        name: {
+            en: 'Color Balance',
+            es: 'Color Balance'
+        },
+        class: 'proColorBalance',
+        gitHubLink: 'https://github.com/Manuel-GNcode/color-balance',
+        description: {
+            en: proDescriptions.cBalEn,
+            es: proDescriptions.cBalEs
+        },
+        proLan: 'react',
+        key: 'color-balance'
+    },
     cutePortfolio: {
         name: {
             en: 'Lau Illustration',

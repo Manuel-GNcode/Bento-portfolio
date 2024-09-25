@@ -40,6 +40,16 @@
     opacity: 1;
 }
 
+.proColorBalance {
+    background-image: url(/color-balance-1.webp);
+}
+.proColorBalance2 {
+    background-image: url(/color-balance-2.webp);
+}
+.proColorBalance3 {
+    background-image: url(/color-balance-3.webp);
+}
+
 .proCutePortfolio {
     background-image: url(/cute-portfolio-1.webp);
 }
